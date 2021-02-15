@@ -14,4 +14,7 @@ var timer = setInterval(function(){
 }, 2000);
 
 //printing the current directory name
-console.log(__dirname)
+console.log(__dirname);
+
+//printing the absolute path of my file
+console.log(__filename);
