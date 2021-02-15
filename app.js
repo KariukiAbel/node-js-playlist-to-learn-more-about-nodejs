@@ -12,3 +12,6 @@ var timer = setInterval(function(){
     clearInterval(timer)
   }
 }, 2000);
+
+//printing the current directory name
+console.log(__dirname)
