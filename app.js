@@ -22,3 +22,5 @@ console.log(__dirname);
 console.log(__filename);
 console.log(count(['abel', 'james', 'jane']));
 console.log(stuff.adder(2,3));
+console.log(stuff.checkWheterEven(3));
+console.log(stuff.pi);

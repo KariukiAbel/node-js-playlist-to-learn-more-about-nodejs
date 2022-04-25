@@ -15,3 +15,10 @@ function checkWheterEven(a) {
 module.exports.adder = adder;
 module.exports.checkWheterEven = checkWheterEven;
 module.exports.pi = pi;
+
+ //also can be done as follows
+ // module.exports = {
+ //   adder: adder,
+ //   pi: pi,
+ //   checkWheterEven: checkWheterEven
+ // };
