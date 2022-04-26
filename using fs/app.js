@@ -8,11 +8,11 @@ const fs = require('fs');
 
 
 // reading and writing a file asynchroniously
-fs.readFile('new textfile.txt', 'utf8', (err, data)=> {
+// fs.readFile('new textfile.txt', 'utf8', (err, data)=> {
 //callback function fired when the proces is done
-console.log(data);
-})
-console.log('This line will be executed first before the output of the file reading');
+// console.log(data);
+// })
+// console.log('This line will be executed first before the output of the file reading');
 
 //deleting a file
 // fs.unlink('new textfile.txt');
@@ -21,4 +21,20 @@ console.log('This line will be executed first before the output of the file read
 // fs.mkdirSync('New folder')
 
 // removing or deleting a folder
-fs.rmdirSync('New folder')
+// fs.rmdirSync('New folder')
+
+
+//doing all the above asynchroniously
+fs.mkdir('New folder',(err)=>{
+  if (err) {
+console.log(err);
+  }
+  fs.readFile('text.txt', 'utf8',(err, data)=>{
+    if (err) {
+      console.log(err + " reading error");
+    }
+    fs.writeFile('./New folder/text1.docx', data, (err)=>{
+      console.log("Write error "+ err);
+    })
+  });
+});
