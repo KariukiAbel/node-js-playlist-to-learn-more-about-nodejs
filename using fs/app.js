@@ -38,3 +38,15 @@ console.log(err);
     })
   });
 });
+
+//removing the file and directory asynchroniously
+fs.unlink('./New folder/text1.docx', (err)=>{
+  if (err) {
+    console.log('Could not delete file because ' + err);
+  }
+  fs.rmdir('New folder', (err)=>{
+    if (err) {
+      console.log('Error removing directory '+err);
+    }
+  })
+})
