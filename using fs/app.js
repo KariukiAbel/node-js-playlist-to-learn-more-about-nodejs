@@ -18,4 +18,7 @@ console.log('This line will be executed first before the output of the file read
 // fs.unlink('new textfile.txt');
 
 //creating a folder synchroniously
-fs.mkdirSync('New folder')
+// fs.mkdirSync('New folder')
+
+// removing or deleting a folder
+fs.rmdirSync('New folder')
