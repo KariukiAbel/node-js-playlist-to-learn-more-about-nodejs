@@ -17,8 +17,8 @@ const writeStream = fs.createWriteStream(__dirname + '/text2.txt')
 
 const server = http.createServer((req, res)=>{
 console.log('request was made from '+ req.url);
-res.writeHead(200, {'Content-Type':'text/plain'})
-const readStream = fs.createReadStream(__dirname + '/text.txt','utf8')
+res.writeHead(200, {'Content-Type':'text/html'})
+const readStream = fs.createReadStream(__dirname + '/index.html','utf8')
 readStream.pipe(res)
 // res.end("This is node js")
 })
