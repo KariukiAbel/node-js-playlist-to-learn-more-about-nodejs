@@ -13,13 +13,15 @@ const writeStream = fs.createWriteStream(__dirname + '/text2.txt')
 
 
 // using pipe used on readable streams
-readStream.pipe(writeStream)
+// readStream.pipe(writeStream)
 
-// const server = http.createServer((req, res)=>{
-//   console.log('request was made from '+ req.url);
-// res.writeHead(200, {'Content-Type':'text/plain'})
+const server = http.createServer((req, res)=>{
+console.log('request was made from '+ req.url);
+res.writeHead(200, {'Content-Type':'text/plain'})
+const readStream = fs.createReadStream(__dirname + '/text.txt','utf8')
+readStream.pipe(res)
 // res.end("This is node js")
-// })
+})
 
-// server.listen(3000, 'localhost');
+server.listen(3000, 'localhost');
 console.log('Listening to port 3000');
