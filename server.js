@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 
 
-const readStream = fs.createReadStream(__dirname + '/text.txt')
+const readStream = fs.createReadStream(__dirname + '/text.txt','utf8')
 readStream.on('data',(chunk)=> {
   console.log('new chunk received: ')
    console.log(chunk);
