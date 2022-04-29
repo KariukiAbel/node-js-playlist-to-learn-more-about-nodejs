@@ -3,9 +3,12 @@ const fs = require('fs');
 
 
 const readStream = fs.createReadStream(__dirname + '/text.txt','utf8')
+const writeStream = fs.createWriteStream(__dirname + '/text2.txt')
+
 readStream.on('data',(chunk)=> {
   console.log('new chunk received: ')
-   console.log(chunk);
+   // console.log(chunk);
+   writeStream.write(chunk)
  })
 
 // const server = http.createServer((req, res)=>{
