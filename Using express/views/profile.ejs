@@ -17,5 +17,13 @@
 <h1>Welcome <%=person%> to Nabesh.ke</h1>
 <p><strong>Age</strong><%= data.age %></p>
 <p><strong>Job</strong><%= data.job %></p>
+<h2>Hobbies</h2>
+<ol>
+<%# embending js code  %>
+  <% data.hobbies.foreach((item){ %>
+<li><%= item %></li>
+  <% }) %>
+
+</ol>
   </body>
 </html>

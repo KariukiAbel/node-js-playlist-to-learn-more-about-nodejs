@@ -25,7 +25,8 @@ app.get('/profile/:name', (req,res)=> {
 // rendering the profile.ejs view in views folder
 var data ={
   age:24,
-  job: 'Software developer and engineer'
+  job: 'Software developer and engineer',
+  hobbies:['eating','sleeping','coding', 'travelling', 'reading','driving']
 }
 res.render('profile', {person: req.params.name, data})
 })
