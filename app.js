@@ -6,7 +6,7 @@ const stuff = require('./stuff');
 //   time+=2;
 //   console.log(time + " seconds have passed");
 // }, 2000);
-
+//
 // var timer = setInterval(function(){
 //   time+=2;
 //   console.log(time + " seconds have passed");
