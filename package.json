@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/KariukiAbel/node-js-playlist-to-learn-more-about-nodejs/issues"
   },
-  "homepage": "https://github.com/KariukiAbel/node-js-playlist-to-learn-more-about-nodejs#readme"
+  "homepage": "https://github.com/KariukiAbel/node-js-playlist-to-learn-more-about-nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
