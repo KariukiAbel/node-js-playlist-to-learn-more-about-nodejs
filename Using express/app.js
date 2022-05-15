@@ -9,16 +9,15 @@ app.set('view engine', 'ejs')
 
 app.get('/', (req,res)=>{
   // res.send('This is the homepage')
-  var index = '../index.html'
-  res.sendFile(index)
+  res.sendFile('/home/nabesh/AtomProjects/node js/node js playlist/index.html')
 })
 
 app.get('/contact', (req,res)=>{
 // res.send('This is the contact page')
-res.sendFile('../contact.html')
+res.sendFile('../'+__dirname+'/contact.html')
 })
 
-app.get('/profile/:id', (req,res)=>res.send('You request to see the profile with the id of ' + req.params.id))
+// app.get('/profile/:id', (req,res)=>res.send('You request to see the profile with the id of ' + req.params.id))
 
 app.get('/profile/:name', (req,res)=> {
   // res.send('You request to see the profile with the name of ' + req.params.name)
@@ -28,6 +27,7 @@ var data ={
   job: 'Software developer and engineer',
   hobbies:['eating','sleeping','coding', 'travelling', 'reading','driving']
 }
+console.log(req.params.name);
 res.render('profile', {person: req.params.name, data})
 })
 
