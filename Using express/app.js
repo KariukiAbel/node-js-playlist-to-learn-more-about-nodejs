@@ -14,7 +14,7 @@ app.get('/', (req,res)=>{
 
 app.get('/contact', (req,res)=>{
 // res.send('This is the contact page')
-res.sendFile('../'+__dirname+'/contact.html')
+res.sendFile('/home/nabesh/AtomProjects/node js/node js playlist/contact.html')
 })
 
 // app.get('/profile/:id', (req,res)=>res.send('You request to see the profile with the id of ' + req.params.id))
