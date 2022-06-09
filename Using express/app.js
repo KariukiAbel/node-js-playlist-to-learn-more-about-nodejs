@@ -4,9 +4,9 @@ var path = require('path');
 // setting up our express app
 const app = express()
 
-// when templates are requested, by default they will be found
-// at the views folder according to ejs
+// when templates are requested, by default they will be found at the views folder according to ejs
 //set directory to contain the template ('views')
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -24,18 +24,13 @@ app.get('/contact', (req, res) => {
 
 app.get('/profile/:name', (req, res) => {
     // res.send('You request to see the profile with the name of ' + req.params.name)
-
-    // rendering profile.ejs view in views folder
-    var data = {
+    const data = {
         age: 24,
         job: 'Software developer and engineer',
         hobbies: ['eating', 'sleeping', 'coding', 'traveling', 'reading', 'driving']
       }
 
-    // console.log(req.params.name);
-
-    res.render('profile', { person: req.params.name, data });
-
+    res.render('profile', { person: req.params.name, data })
 });
 
 app.listen(3000);

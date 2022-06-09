@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
   <meta charset="utf-8">
   <title><%=person%></title>
@@ -22,23 +21,21 @@
 </head>
 
 <body>
+
   <!-- including partial views in ejs -->
-  <%-include  partials/nav.ejs-%>
-<!--
-  <%- include('../top-wrapper') %>
-  TEST
-  <%- include('../bottom-wrapper') %> -->
+<%- include ('partials/nav.ejs') -%>
 
-<%- include('partials/nav') %>
-
-  <h1>Welcome <%=person%> to Nabesh.ke</h1>
+  <h1>Welcome <%= person %> to Nabesh.ke</h1>
   <p><strong>Age: </strong><%= data.age %></p>
   <p><strong>Job: </strong><%= data.job %></p>
   <h2>Hobbies</h2>
   <ol>
-    <!-- <%# embending js code  %> -->
+    <%# embending js code  %>
     <% data.hobbies.forEach(function (item){ %>
-    <li><%= item %></li><% }); %>
+    <li>
+      <%= item %>
+    </li>
+    <% }) %>
   </ol>
 </body>
 </html>
