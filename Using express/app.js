@@ -11,7 +11,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // using middlewares and static files
-app.use('/assets', express.static('assets'))
+app.use('/assets',express.static(path.join(__dirname, 'assets')));
 
 // old way of rendering html files
 // app.get('/', (req, res) => {
