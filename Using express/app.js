@@ -1,10 +1,13 @@
 const express = require('express');
+var path = require('path');
 
 // setting up our express app
 const app = express()
 
 // when templates are requested, by default they will be found
 // at the views folder according to ejs
+//set directory to contain the template ('views')
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {

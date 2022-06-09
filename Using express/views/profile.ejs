@@ -23,7 +23,13 @@
 
 <body>
   <!-- including partial views in ejs -->
-  <% include partials/nav.ejs %>
+  <%-include  partials/nav.ejs-%>
+<!--
+  <%- include('../top-wrapper') %>
+  TEST
+  <%- include('../bottom-wrapper') %> -->
+
+<%- include('partials/nav') %>
 
   <h1>Welcome <%=person%> to Nabesh.ke</h1>
   <p><strong>Age: </strong><%= data.age %></p>
